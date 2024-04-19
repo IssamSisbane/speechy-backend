@@ -10,8 +10,6 @@ export async function speechyTranscription(request: HttpRequest, context: Invoca
     const file = formData.get('audio') as File;
     const lang = formData.get('lang') as string;
 
-    console.log(file)
-
     try {
         const openai = new OpenAI({apiKey: OPENAI_API_KEY});
 
